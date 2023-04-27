@@ -274,15 +274,18 @@ class VideoLooper:
         message if the on screen display is enabled.
         """
         # Print message to console with number of media files in playlist.
-        message = 'Found {0} media file{1}.'.format(playlist.length(), 
-            's' if playlist.length() >= 2 else '')
+        message = 'Found {0} memor{1}.'.format(playlist.length(), 
+            'ies' if playlist.length() >= 2 else 'y')
+        """message = 'Found {0} media file{1}.'.format(playlist.length(), 
+            's' if playlist.length() >= 2 else '')"""
         self._print(message)
         # Do nothing else if the OSD is turned off.
         if not self._osd:
             return
         # Draw message with number of movies loaded and animate countdown.
         # First render text that doesn't change and get static dimensions.
-        label1 = self._render_text(message + ' Starting playback in:')
+        label1 = self._render_text(message + ' Initiating recall in:')
+        "label1 = self._render_text(message + ' Starting playback in:')"""
         l1w, l1h = label1.get_size()
         sw, sh = self._screen.get_size()
         for i in range(self._countdown_time, 0, -1):
