@@ -30,7 +30,9 @@ class DirectoryReader:
 
     def idle_message(self):
         """Return a message to display when idle and no files are found."""
-        return 'No files found in {0}'.format(self._path)
+        return 'No memories found...'
+        """return 'No files found in {0}'.format(self._path)"""
+
 
     def count_files(self):
         return len(os.listdir(self._path))
