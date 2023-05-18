@@ -38,7 +38,7 @@ class USBDriveReader:
 
     def idle_message(self):
         """Return a message to display when idle and no files are found."""
-        return 'Upload Memories.'
+        return 'Connect to Initialize Memory Transfer Protocol.'
         """return 'Insert USB drive with compatible movies.'"""
 
 
